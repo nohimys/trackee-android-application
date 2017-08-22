@@ -1,7 +1,8 @@
-package com.nohimys.mynotes
+package com.nohimys.mynotes.userinterfaces
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.nohimys.mynotes.R
 
 class MainActivity : AppCompatActivity() {
 
