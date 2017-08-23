@@ -4,10 +4,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
-import android.net.NetworkInfo
 import android.widget.Toast
 
-import com.nohimys.mynotes.utils.InternetConnectionUtil
+import com.nohimys.mynotes.helpers.InternetConnectionHelper
 
 /**
  * Created by Nohim Sandeepa on 8/22/2017.
@@ -24,11 +23,11 @@ class InternetConnectionChangeNotifier : BroadcastReceiver() {
         val isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting
 
         if (isConnected) {
-            InternetConnectionUtil.onInternetConnected()
+            InternetConnectionHelper.onInternetConnected()
             Toast.makeText(context, "Internet Connected", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(context, "Internet Disonnected", Toast.LENGTH_SHORT).show()
-            InternetConnectionUtil.onInternetDisconnected()
+            InternetConnectionHelper.onInternetDisconnected()
         }
     }
 }

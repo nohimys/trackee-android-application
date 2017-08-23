@@ -1,13 +1,12 @@
 package com.nohimys.mynotes.broadcastreceivers
 
 import android.content.BroadcastReceiver
-import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
 import android.provider.Settings
 import android.widget.Toast
 
-import com.nohimys.mynotes.utils.GpsLocationUtil
+import com.nohimys.mynotes.helpers.GpsLocationHelper
 
 /**
  * Created by Nohim Sandeepa on 8/22/2017.
@@ -26,10 +25,10 @@ class GPSLocationServiceOnOffNotifier : BroadcastReceiver() {
 
             if (mode == Settings.Secure.LOCATION_MODE_OFF) {
                 Toast.makeText(context, "LOCATION_MODE_OFF", Toast.LENGTH_SHORT).show()
-                GpsLocationUtil.getInstance().onGpsLocationOff()
+                GpsLocationHelper.getInstance().onGpsLocationOff()
             } else if (mode == Settings.Secure.LOCATION_MODE_SENSORS_ONLY || mode == Settings.Secure.LOCATION_MODE_HIGH_ACCURACY) {
                 Toast.makeText(context, "LOCATION_MODE_ON ", Toast.LENGTH_SHORT).show()
-                GpsLocationUtil.getInstance().onGpsLocationOn()
+                GpsLocationHelper.getInstance().onGpsLocationOn()
             }
 
 

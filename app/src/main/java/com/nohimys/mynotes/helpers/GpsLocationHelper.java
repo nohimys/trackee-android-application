@@ -1,4 +1,4 @@
-package com.nohimys.mynotes.utils;
+package com.nohimys.mynotes.helpers;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -8,17 +8,17 @@ import android.provider.Settings;
  * Created by Nohim Sandeepa on 8/22/2017.
  */
 
-public class GpsLocationUtil {
-    private static GpsLocationUtil myInstance;
+public class GpsLocationHelper {
+    private static GpsLocationHelper myInstance;
 
     private boolean isGpsOn;
 
-    private GpsLocationUtil(){
+    private GpsLocationHelper(){
     }
 
-    public synchronized static GpsLocationUtil getInstance(){
+    public synchronized static GpsLocationHelper getInstance(){
         if(myInstance == null){
-            myInstance = new GpsLocationUtil();
+            myInstance = new GpsLocationHelper();
         }
         return myInstance;
     }
