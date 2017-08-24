@@ -6,9 +6,12 @@ package com.nohimys.mynotes.helpers;
 
 public class WebServiceInvocationHelper {
 
-    private boolean isEligibleForWebCall(){
+
+
+    private boolean isEligibleForWebCall() {
         //TODO:
         //Check the timing in shared preferences
         return false;
     }
+
 }
