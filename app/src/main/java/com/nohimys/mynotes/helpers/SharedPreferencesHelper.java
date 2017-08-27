@@ -142,9 +142,9 @@ public class SharedPreferencesHelper {
 
 
     public enum Keys{
-        IS_ELIGIBLE_FOR_UPDATE_LOCATION,
         USER_ID,
-        LAST_UPLOADED_TIME,
+        LAST_DATA_UPLOADED_TIME,
+        LAST_LOCATION_GATHERED_TIME,
         TICKER_TICK,
         UPDATING_DURATION
     }
